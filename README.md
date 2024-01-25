@@ -1,3 +1,5 @@
+Forked from https://github.com/nemequ/munit/
+
 # µnit
 
 µnit is a small but full-featured unit testing framework for C.  It has
@@ -30,6 +32,18 @@ Features µnit does not currently include, but some day may include
 
  * [TAP](http://testanything.org/) support; feel free to discuss in
    [issue #1](https://github.com/nemequ/munit/issues/1)
+
+### Include with CMake FetchContent
+
+```cmake
+FetchContent_Declare(
+    munit
+    GIT_REPOSITORY https://github.com/NEXFI-KK/munit
+    GIT_TAG        master
+)
+
+FetchContent_MakeAvailable(munit)
+```
 
 ### Include into your project with meson
 
