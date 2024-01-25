@@ -45,6 +45,11 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(munit)
 ```
 
+> [!IMPORTANT]  
+> By default µnit will fork test cases, which can often lead to breaking the debugger.
+> Unless you need this forking behavior for memory safety, it can be disabled by adding `add_compile_definitions(MUNIT_NO_FORK)`
+> before the `FetchContent_Declare` call.
+
 ### Include into your project with meson
 
 In your `subprojects` folder put a `munit.wrap` file containing:
